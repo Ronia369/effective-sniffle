@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تساهوش | سامانه هوشمند استعدادیابی</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            background: #000314;
+            font-family: 'Inter', 'Vazirmatn', system-ui;
+            overflow-x: hidden;
+        }
+        /* افکت نئونی */
+        .neon-text {
+            text-shadow: 0 0 5px #4f46e5, 0 0 10px #4f46e5, 0 0 20px #4f46e5;
+            animation: neonPulse 1.5s ease-in-out infinite alternate;
+        }
+        @keyframes neonPulse {
+            from { text-shadow: 0 0 5px #4f46e5, 0 0 10px #4f46e5; }
+            to { text-shadow: 0 0 15px #818cf8, 0 0 25px #818cf8, 0 0 35px #4f46e5; }
+        }
+body {
+    background-image: 
+        url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Maryam_Mirzakhani_-_ICM_2018_%28cropped%29.jpg/400px-Maryam_Mirzakhani_-_ICM_2018_%28cropped%29.jpg'),
+        repeating-radial-gradient(circle at 10% 20%, rgba(79,70,229,0.08) 0px, rgba(79,70,229,0.08) 2px, transparent 2px, transparent 8px),
+        repeating-linear-gradient(45deg, rgba(59,130,246,0.05) 0px, rgba(59,130,246,0.05) 1px, transparent 1px, transparent 20px);
+    background-repeat: no-repeat, repeat, repeat;
+    background-position: bottom left 5%, center;
+    background-size: 350px, auto, auto;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* آیکون‌های فیزیک و شیمی و ریاضی به صورت المنت‌های شناور در بکگراند */
+body::before {
+    content: "⚛️🔬📐🧬⚡🔭🧪📏🔭⚛️";
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 80px;
+    opacity: 0.12;
+    pointer-events: none;
+    white-space: pre-wrap;
+    text-align: right;
+    line-height: 1.2;
+    z-index: 0;
+}
+
+body::after {
+    content: "🧪📐⚛️🔬⚡🔭📏🧬⚛️🔬";
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    font-size: 60px;
+    opacity: 0.1;
+    pointer-events: none;
+    white-space: pre-wrap;
+    text-align: right;
+    z-index: 0;
+}
+        /* چراغ ایده */
+        .lamp-bg {
+            background: linear-gradient(145deg, #fbbf24 0%, #f59e0b 100%);
+            box-shadow: 0 0 30px rgba(251,191,36,0.6);
+            animation: glowLamp 2s infinite alternate;
+        }
+        @keyframes glowLamp {
+            from { box-shadow: 0 0 20px rgba(251,191,36,0.4); }
+            to { box-shadow: 0 0 50px rgba(251,191,36,0.9); }
+        }
+        .glass-card {
+            background: rgba(20, 25, 55, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            border-radius: 1.5rem;
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <header class="sticky top-0 z-50 flex justify-between items-center px-6 py-4 bg-black/70 backdrop-blur-md border-b border-indigo-500/40">
+        <div class="flex items-center gap-2">
+            <span class="text-2xl">🧠</span>
+            <h1 class="text-xl md:text-2xl font-bold"><span class="text-indigo-400">تسا</span><span class="text-white">هوش</span></h1>
+            <span class="text-xs bg-indigo-600/60 px-2 py-1 rounded-full">AI</span>
+        </div>
+        <nav class="hidden md:flex gap-6">
+            <a href="#home" class="hover:text-indigo-300">خانه</a>
+            <a href="#assessment" class="hover:text-indigo-300">ارزیابی</a>
+            <a href="#systems" class="hover:text-indigo-300">سامانه‌ها</a>
+            <a href="#sancode" class="hover:text-indigo-300">سانکد</a>
+        </nav>
+    </header>
+
+    <section id="home" class="relative min-h-screen scientific-op">
+        <div class="absolute inset-0 bg-black/40 z-0"></div>
+        <div class="relative z-10 container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+
+                <!-- ستون چپ: مولکول‌ها و مریم میرزاخانی -->
+                <div class="md:col-span-3 hidden md:block">
+                   <!-- ستون راست کامل -->
+<div class="md:col-span-3">
+    
+    
+    <!-- ایده‌های گینس (جدید اضافه شد) -->
+    <div class="glass-card p-4 mb-5 test-sm md:text-base">
+        <div class="flex items-center gap-2 mb-3 border-b border-yellow-500/50 pb-2">
+            <span class="text-2xl">🏆</span>
+            <p class="text-yellow-400 font-bold text-center">رکوردهای جهانی گینس (۱۴۰۰ تا ۱۴۰۴)</p>
+        </div>
+        <div class="space-y-3 max-h-96 overflow-y-auto custom-scroll">
+            <div class="border-r-4 border-yellow-500 pr-3"><p class="text-xs text-gray-400">۲۰۲۵</p><p class="text-sm font-bold text-white">یانگ چونگ</p><p class="text-xs text-gray-300">ساخت کوچک‌ترین ربات جهان (۰.۲ میلی‌متر)</p></div>
+            <div class="border-r-4 border-yellow-500 pr-3"><p class="text-xs text-gray-400">۲۰۲۴</p><p class="text-sm font-bold text-white">آریا صبوری (۱۸ ساله ایرانی)</p><p class="text-xs text-gray-300">ثبت الگوریتم جدید حل مکعب روبیک در ۳.۱۳ ثانیه با ربات</p></div>
+            <div class="border-r-4 border-yellow-500 pr-3"><p class="text-xs text-gray-400">۲۰۲۴</p><p class="text-sm font-bold text-white">تیم دانش‌آموزی ژاپن</p><p class="text-xs text-gray-300">بیشترین تعداد LED روشن در یک مدار کوچک (۱۰,۰۰۰ عدد)</p></div>
+            <div class="border-r-4 border-yellow-500 pr-3"><p class="text-xs text-gray-400">۲۰۲۳</p><p class="text-sm font-bold text-white">دیوید آگوئیلار (۱۴ ساله)</p><p class="text-xs text-gray-300">جوانترین مخترع دستگاه تبدیل گرما به برق</p></div>
+            <div class="border-r-4 border-yellow-500 pr-3"><p class="text-xs text-gray-400">۲۰۲۳</p><p class="text-sm font-bold text-white">سارا محمدی (۱۷ ساله از ایران)</p><p class="text-xs text-gray-300">طراحی سامانه تشخیص زودهنگام سرطان سینه با هوش مصنوعی</p></div>
+            <div class="border-r-4 border-yellow-500 pr-3"><p class="text-xs text-gray-400">۲۰۲۲</p><p class="text-sm font-bold text-white">گروه رباتیک MIT</p><p class="text-xs text-gray-300">ساخت سریع‌ترین ربات جراح (کمتر از ۱ دقیقه بخیه)</p></div>
+            <div class="border-r-4 border-yellow-500 pr-3"><p class="text-xs text-gray-400">۲۰۲۲</p><p class="text-sm font-bold text-white">لئوناردو فیرابا (۱۵ ساله)</p><p class="text-xs text-gray-300">اختراع خودروی مقوایی با قابلیت حرکت با باد</p></div>
+            <div class="border-r-4 border-yellow-500 pr-3"><p class="text-xs text-gray-400">۲۰۲۱</p><p class="text-sm font-bold text-white">تیم نوجوانان هند</p><p class="text-xs text-gray-300">بیشترین تعداد پهپاد ساخته شده توسط دانش‌آموزان (۱۲۰ فروند)</p></div>
+        </div>
+    </div>
+    
+</div>
+
+<style>
+.custom-scroll::-webkit-scrollbar {
+    width: 4px;
+}
+.custom-scroll::-webkit-scrollbar-track {
+    background: #1e1b4b;
+    border-radius: 10px;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+    background: #fbbf24;
+    border-radius: 10px;
+}
+</style>
+                </div>
+
+                <!-- ستون وسط: توضیحات نئونی و فرم -->
+                <div class="md:col-span-6">
+                    <div class="glass-card p-6 text-center">
+                        <div class="inline-block bg-indigo-500/20 rounded-full px-4 py-1 text-sm mb-4 border border-indigo-400 neon-text">✨ سامانه هوشمند استعدادیابی ✨</div>
+                        <h1 class="text-4xl md:text-5xl font-bold mb-4"><span class="text-indigo-400">تسا</span><span class="text-white">هوش</span></h1>
+
+                        <div class="text-right space-y-3 text-gray-200">
+                            <p><strong class="text-indigo-300 text-lg">🔍 این سامانه برای چیست؟</strong></p>
+                            <p>هر ساله هزاران دانش‌آموز بااستعداد، مسیر درست پژوهش و هدایت تحصیلی خود را نمی‌شناسند و استعدادشان شکوفا نمی‌شود.</p>
+                            <p><strong class="text-yellow-300">هوشیارسانا</strong> با استفاده از <strong class="text-indigo-300">الگوریتم اختصاصی هوش مصنوعی</strong>، تیپ استعداد شما را در ۶ حوزه اصلی شناسایی کرده و متناسب با آن، <strong class="text-green-300">یک ایده پژوهشی کامل برای جشنواره خوارزمی</strong> پیشنهاد می‌دهد.</p>
+                            <p class="text-indigo-300">🧠 کافیست به ۶ سوال زیر پاسخ دهید. تحلیل در کمتر از یک ثانیه انجام می‌شود.</p>
+                        </div>
+                    </div>
+
+                    <!-- فرم ارزیابی -->
+                    <div id="assessment" class="glass-card p-6 mt-6">
+                        <div class="space-y-3">
+                            <div><label class="block text-indigo-300 font-bold mb-1">۱. کدوم فعالیت برات لذت‌بخش‌تره؟</label><select id="q1" class="w-full p-2 rounded bg-gray-800 border border-indigo-500"><option value="physics">تحلیل مسائل ریاضی و فیزیک</option><option value="chemistry">انجام آزمایش شیمی یا زیست</option><option value="coding">برنامه‌نویسی و ساخت وبسایت</option><option value="robotics">ساخت ربات یا دستگاه</option><option value="social">مطالعه مسائل اجتماعی</option><option value="art">نقاشی و طراحی</option></select></div>
+                            <div><label class="block text-indigo-300 font-bold mb-1">۲. تو مدرسه کدوم درس رو بیشتر دوست داری؟</label><select id="q2" class="w-full p-2 rounded bg-gray-800 border border-indigo-500"><option value="physics">ریاضی و فیزیک</option><option value="chemistry">شیمی و زیست</option><option value="coding">کامپیوتر</option><option value="robotics">کارگاه ساخت</option><option value="social">علوم اجتماعی</option><option value="art">هنر</option></select></div>
+                            <div><label class="block text-indigo-300 font-bold mb-1">۳. دوست داری چه تاثیری روی دنیا بذاری؟</label><select id="q3" class="w-full p-2 rounded bg-gray-800 border border-indigo-500"><option value="physics">کشف قانون جدید علمی</option><option value="chemistry">ساخت داروی جدید</option><option value="coding">توسعه اپلیکیشن هوشمند</option><option value="robotics">اختراع وسیله مفید</option><option value="social">حل مشکلات اجتماعی</option><option value="art">زیبا کردن دنیا</option></select></div>
+                            <div><label class="block text-indigo-300 font-bold mb-1">۴. کدوم جمله بهت نزدیک‌تره؟</label><select id="q4" class="w-full p-2 rounded bg-gray-800 border border-indigo-500"><option value="physics">عاشق حل معماهای فکری</option><option value="chemistry">از واکنش‌های شیمیایی لذت میبرم</option><option value="coding">دوست دارم ماشین‌ها رو برنامه ریزی کنم</option><option value="
+
+robotics">همیشه میخواستم یه ربات بسازم</option><option value="social">به احساسات دیگران اهمیت میدم</option><option value="art">خلاقیت مهمترین چیز منه</option></select></div>
+                            <div><label class="block text-indigo-300 font-bold mb-1">۵. کدوم فیلم به سلیقه تو میخوره؟</label><select id="q5" class="w-full p-2 rounded bg-gray-800 border border-indigo-500"><option value="physics">مستند علمی فضا</option><option value="chemistry">فیلم درباره اختراعات</option><option value="coding">فیلم هک و تکنولوژی</option><option value="robotics">فیلم رباتیک</option><option value="social">درام اجتماعی</option><option value="art">انیمیشن خلاقانه</option></select></div>
+                            <div><label class="block text-indigo-300 font-bold mb-1">۶. تو کار گروهی چه نقشی دوست داری؟</label><select id="q6" class="w-full p-2 rounded bg-gray-800 border border-indigo-500"><option value="physics">تحلیل و برنامه‌ریزی</option><option value="chemistry">کار عملی و آزمایش</option><option value="coding">ایده‌های فناورانه</option><option value="robotics">ساخت و مونتاژ</option><option value="social">ارتباط با دیگران</option><option value="art">ایده‌پردازی خلاق</option></select></div>
+                        </div>
+                        <button id="analyzeBtn" class="w-full mt-5 bg-indigo-600 hover:bg-indigo-700 py-3 rounded-xl font-bold transition text-lg">✨ تحلیل با هوش مصنوعی ✨</button>
+                        <div id="resultBox" class="mt-6 hidden p-5 rounded-xl bg-gradient-to-br from-indigo-900/90 to-purple-900/90 border-2 border-indigo-400 shadow-2xl">
+    <div class="flex items-center gap-2 mb-3">
+        <span class="text-3xl">🏆</span>
+        <h3 class="text-xl font-bold text-yellow-300">نتیجه تحلیل هوش مصنوعی</h3>
+    </div>
+
+    <p id="resultTalent" class="text-2xl font-bold text-indigo-200 mb-2"></p>
+    <p id="resultDesc" class="text-gray-200 text-sm leading-relaxed mb-3"></p>
+
+    <!-- جمله از مخترع -->
+    <div class="bg-black/40 p-3 rounded-lg mb-3 border-r-4 border-yellow-500">
+        <p class="text-yellow-400 text-xs">💬 جمله از مخترع معروف:</p>
+        <p id="inventorQuote" class="text-white italic text-sm"></p>
+    </div>
+
+    <!-- ایده پژوهشی -->
+    <div class="bg-indigo-800/50 p-3 rounded-lg mb-3">
+        <p class="text-indigo-300 font-bold text-sm">💡 ایده پژوهشی پیشنهادی:</p>
+        <p id="resultIdea" class="text-white text-sm mt-1"></p>
+    </div>
+
+    <!-- ابزار و زمان -->
+    <div class="grid grid-cols-2 gap-2 mb-2">
+        <div class="bg-gray-800/70 p-2 rounded-lg text-center">
+            <p class="text-blue-300 text-xs">🛠️ ابزار مورد نیاز</p>
+            <p id="tools" class="text-white text-xs font-bold"></p>
+        </div>
+        <div class="bg-gray-800/70 p-2 rounded-lg text-center">
+            <p class="text-green-300 text-xs">⏱️ زمان تقریبی</p>
+            <p id="time" class="text-white text-xs font-bold"></p>
+        </div>
+    </div>
+
+    <!-- سه ایده برای شروع -->
+    <div class="bg-gray-800/70 p-2 rounded-lg">
+        <p class="text-purple-300 text-xs text-center mb-1">🔥 سه ایده باحال برای شروع:</p>
+        <p id="startIdeas" class="text-white text-xs whitespace-pre-line"></p>
+    </div>
+</div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-3">
+    <!-- چراغ ایده -->
+    <div class="lamp-bg rounded-2xl p-5 text-center mb-5">
+        <span class="text-6xl">💡</span>
+        <p class="font-bold text-black mt-2 text-lg">چراغ ایده و نوآوری</p>
+        <p class="text-xs text-black/80">روشنگر مسیر پژوهش شما</p>
+    </div>
+    
+    <!-- کتاب‌ها -->
+    <div class="glass-card p-4">
+        <p class="text-indigo-300 font-bold text-center mb-3">📚 منابع پایه دانشگاهی</p>
+        <div class="space-y-2 text-sm">
+            <div class="flex items-center gap-2"><span class="text-blue-400">📘</span> فیزیک پایه هالیدی و رزنیک</div>
+            <div class="flex items-center gap-2"><span class="text-green-400">📗</span> شیمی عمومی سیلبربرگ</div>
+            <div class="flex items-center gap-2"><span class="text-purple-400">📙</span> ریاضیات توماس و استوارت</div>
+            <div class="flex items-center gap-2"><span class="text-red-400">📕</span> زیست شناسی کمپبل</div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- سامانه‌های مرتبط -->
+    <section id="systems" class="py-16 px-6 bg-black/60">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl font-bold text-center text-indigo-400 mb-10">🌐 سامانه‌های هوشمند و پایگاه‌های علمی مرتبط با پژوهش</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-card p-5 text-center"><span
+
+class="text-4xl">📚</span><h3 class="font-bold text-indigo-300 mt-2">پایگاه ISC</h3><p class="text-sm text-gray-300">پایگاه استنادی علوم جهان اسلام</p><a href="https://isc.ac" target="_blank" class="text-indigo-400 text-xs hover:underline">isc.ac</a></div>
+                <div class="glass-card p-5 text-center"><span class="text-4xl">🔍</span><h3 class="font-bold text-indigo-300 mt-2">گوگل اسکالر</h3><p class="text-sm text-gray-300">موتور جستجوی هوشمند مقالات علمی</p><a href="https://scholar.google.com" target="_blank" class="text-indigo-400 text-xs hover:underline">scholar.google.com</a></div>
+                <div class="glass-card p-5 text-center"><span class="text-4xl">📖</span><h3 class="font-bold text-indigo-300 mt-2">سامانه رشد</h3><p class="text-sm text-gray-300">مجلات رشد آموزش و ایده‌های دانش‌آموزی</p><a href="https://roshd.ir" target="_blank" class="text-indigo-400 text-xs hover:underline">roshd.ir</a></div>
+                <div class="glass-card p-5 text-center"><span class="text-4xl">⚙️</span><h3 class="font-bold text-indigo-300 mt-2">پایگاه SID</h3><p class="text-sm text-gray-300">پایگاه اطلاعات علمی جهاد دانشگاهی</p><a href="https://sid.ir" target="_blank" class="text-indigo-400 text-xs hover:underline">sid.ir</a></div>
+                <div class="glass-card p-5 text-center"><span class="text-4xl">🏆</span><h3 class="font-bold text-indigo-300 mt-2">سکوی ایده خوارزمی</h3><p class="text-sm text-gray-300">بانک ایده‌های برگزیده جشنواره</p><a href="https://khwarizmi.ir" target="_blank" class="text-indigo-400 text-xs hover:underline">khwarizmi.ir</a></div>
+                <div class="glass-card p-5 text-center"><span class="text-4xl">🇮🇷</span><h3 class="font-bold text-indigo-300 mt-2">بنیاد ملی نخبگان</h3><p class="text-sm text-gray-300">رصد و هدایت استعدادهای برتر کشور</p><a href="https://bmn.ir" target="_blank" class="text-indigo-400 text-xs hover:underline">bmn.ir</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش سانکد -->
+    <section id="sancode" class="py-12 px-6 text-center">
+        <div class="glass-card p-6 max-w-2xl mx-auto">
+            <span class="text-5xl">🚀</span>
+            <h2 class="text-2xl font-bold text-indigo-400 mt-2">Sancode</h2>
+            <p class="text-gray-300 mt-2">طراح و توسعه‌دهنده این سامانه هوشمند استعدادیابی</p>
+            <p class="text-sm text-gray-400">تخصص در React، Next.js، هوش مصنوعی و طراحی سامانه‌های پژوهشی</p>
+            <a href="https://github.com/Ronia369" target="_blank" class="inline-block mt-4 px-6 py-2 bg-indigo-600 rounded-full hover:bg-indigo-700 transition">مشاهده نمونه کارها در گیت‌هاب</a>
+            <p class="text-xs text-gray-500 mt-4">📧 ارتباط: Sancode90@gmail.com</p>
+        </div>
+    </section>
+
+    <footer class="py-6 text-center text-gray-500 border-t border-gray-800 text-sm">
+        ©️ ۱۴۰۵ - سامانه هوشمند تساهوش | تلفیق هوش مصنوعی و استعدادیابی
+    </footer>
+
+    <script>
+        function playClickSound() {
+    try {
+        const audio = new Audio('click.mp3');
+        audio.volume = 2;  // صدا رو کم کن (0 تا 1)
+        audio.play().catch(e => console.log('صدا پخش نشد'));
+    } catch(e) {
+        console.log('خطا در پخش صدا');
+    }
+}
+
+// صدا رو صدا کن
+playClickSound();
+
+       document.getElementById('analyzeBtn').addEventListener('click', function() {
+    const q1 = document.getElementById('q1').value;
+    const q2 = document.getElementById('q2').value;
+    const q3 = document.getElementById('q3').value;
+    const q4 = document.getElementById('q4').value;
+    const q5 = document.getElementById('q5').value;
+    const q6 = document.getElementById('q6').value;
+
+    let count = { physics:0, chemistry:0, coding:0, robotics:0, social:0, art:0 };
+    [q1,q2,q3,q4,q5,q6].forEach(v => count[v]++);
+
+    let maxType = Object.keys(count).reduce((a,b) => count[a] > count[b] ? a : b);
+
+    let talentName, description, idea, quote, tools, time, startIdeas;
+
+    // ========== تیپ فیزیک و ریاضی ==========
+    if(maxType === 'physics') {
+        talentName = "🔭 تیپ فیزیک و ریاضیات محض";
+        description = "تو یک تحلیل‌گر قوی هستی! عاشق حل مسائل پیچیده، معماها و کشف قوانین طبیعت.";
+        idea = "طراحی یک مدل کامپیوتری برای شبیه‌سازی حرکت سیارات در منظومه شمسی";
+        quote = "«تخیل مهمتر از دانش است، زیرا دانش محدود است اما تمام دنیا را در بر می‌گیرد.» — آلبرت اینشتین";
+        tools = "🔹 کامپیوتر + پایتون + کتابخانه NumPy و Matplotlib";
+        time = "⏱️ ۳ تا ۴ هفته";
+        startIdeas = "🔸 شبیه‌سازی سقوط آزاد یک توپ\n🔸 مدلسازی حرکت آونگ ساده\n🔸 رسم نمودار مدار سیاره‌ها به دور خورشید";
+    } 
+    // ========== تیپ شیمی و زیست ==========
+    else if(maxType === 'chemistry') {
+        talentName = "🧪 تیپ شیمی و زیست‌شناسی";
+        description = "تو عاشق آزمایش کردن، کشف مواد جدید و دیدن واکنش‌های شگفت‌انگیز هستی.";
+        idea = "بررسی تأثیر دما و pH بر سرعت رشد کریستال‌های نمک";
+        quote = "«هیچ چیز در زندگی ترسناک نیست، فقط نیاز به درک دارد. وقت آن رسیده که بیشتر درک کنیم، تا کمتر بترسیم.» — ماری کوری";
+        tools = "🔹 لیوان آزمایش + نمک + آب + دماسنج + ذره‌بین";
+        time = "⏱️ ۱ تا ۲ هفته";
+        startIdeas = "🔸 رشد کریستال نمک در دمای مختلف\n🔸 اثر سرکه روی پوسته تخم‌مرغ\n🔸 رنگین کمان با کاغذ صافی و ماژیک";
+    } 
+    // ========== تیپ برنامه‌نویسی ==========
+    else if(maxType === 'coding') {
+        talentName = "💻 تیپ برنامه‌نویسی و هوش مصنوعی";
+        description = "تو به تکنولوژی، کامپیوتر و هوش مصنوعی علاقه داری. می‌تونی با کدنویسی دنیا رو تغییر بدی.";
+        idea = "ساخت یک چت‌بات ساده که به سوالات درسی پاسخ می‌دهد";
+        quote = "«ساده‌ترین کارها می‌توانند تاثیرگذارترین باشند. فقط کافی است شروع کنی.» — استیو جابز";
+        tools = "🔹 VS Code + HTML + CSS + جاوااسکریپت";
+        time = "⏱️ ۲ تا ۳ هفته";
+        startIdeas = "🔸 ساخت ماشین حساب هوشمند\n🔸 طراحی یک بازی حدس عدد\n🔸 ساختن یک وبسایت معرفی شخصی";
+    } 
+    // ========== تیپ رباتیک ==========
+    else if(maxType === 'robotics') {
+        talentName = "🤖 تیپ رباتیک و ساخت وسایل";
+        description = "تو یک مخترع به دنیا اومدی! دوست داری وسایل رو بسازی و کارهای عملی انجام بدی.";
+        idea = "ساخت یک ربات مسیریاب ساده با موتور و چرخ‌های بازیافتی";
+        quote = "«نوآوری، دیدن چیزی است که همه دیده‌اند و فکر کردن به چیزی که هیچ‌کس فکر نکرده است.» — آلبرت سنت-گیورگی";
+        tools = "🔹 موتور ویبره + باتری + مقوا + چرخ‌های پلاستیکی + چسب حرارتی";
+        time = "⏱️ ۲ تا ۴ هفته";
+        startIdeas = "🔸 ربات نقاش ساده با ماژیک\n🔸 ماشین بادکنکی با نی و بادکنک\n🔸 دست مکانیکی با نی و نخ";
+    } 
+    // ========== تیپ علوم انسانی ==========
+    else if(maxType === 'social') {
+        talentName = "📖 تیپ علوم انسانی و اجتماعی";
+        description = "تو به انسان‌ها، جامعه و تاریخ علاقه داری. می‌تونی مسائل اجتماعی رو تحلیل کنی.";
+        idea = "انجام یک پژوهش میدانی و نظرسنجی درباره تأثیر شبکه‌های اجتماعی بر نمرات دانش‌آموزان";
+        quote = "«تنها راه تغییر جهان این است که مسئولیت آن را بپذیریم.» — ملاله یوسف‌زایی";
+        tools = "🔹 فرم‌های نظرسنجی گوگل + دفتر یادداشت + اینترنت";
+        time = "⏱️ ۲ تا ۳ هفته";
+        startIdeas = "🔸 نظرسنجی از ۲۰ همکلاسی\n🔸 مصاحبه با ۳ معلم درباره روش مطالعه\n🔸 تحلیل نتایج با نمودارهای ساده";
+    } 
+    // ========== تیپ هنر و خلاقیت ==========
+    else {
+        talentName = "🎨 تیپ هنر و خلاقیت";
+        description = "تو یک هنرمند خلاقی! ایده‌های جدید، طراحی و داستان‌سرایی رو دوست داری.";
+        idea = "طراحی یک انیمیشن کوتاه ۳۰ ثانیه‌ای با موضوع یک کشف علمی به زبان ساده";
+        quote = "«خلاقیت یعنی ارتباط دادن چیزهایی که قبلاً به هم مرتبط نبودند.» — استیو جابز";
+        tools = "🔹 کاغذ + مداد رنگی + گوشی موبایل + اپلیکیشن Stop Motion";
+        time = "⏱️ ۱ تا ۲ هفته";
+        startIdeas = "🔸 طراحی پوستر علمی برای مدرسه\n🔸 ساخت استاپ موشن با لگو یا خمیر\n🔸 نوشتن یک داستان کوتاه علمی-تخیلی";
+    }
+
+    // نمایش نتایج
+    document.getElementById('resultTalent').innerHTML = talentName;
+    document.getElementById('resultDesc').innerHTML = description;
+    document.getElementById('inventorQuote').innerHTML = quote;
+    document.getElementById('resultIdea').innerHTML = idea;
+    document.getElementById('tools').innerHTML = tools;
+    document.getElementById('time').innerHTML = time;
+    document.getElementById('startIdeas').innerHTML = startIdeas;
+    document.getElementById('resultBox').classList.remove('hidden');
+    document.getElementById('resultBox').scrollIntoView({ behavior: 'smooth' });
+});
+    </script>
+</body>
+</html>
